@@ -1,6 +1,6 @@
 # Service - stockPriceChart
 
-> Stock Price Chart for the robinhood.com clone.
+> Full-Stack project that displays stock trading information. 
 
 ## Related Projects
 
@@ -21,8 +21,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
 - etc
-
-## Development
 
 ### Installing Dependencies
 
