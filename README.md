@@ -9,12 +9,6 @@
   - https://github.com/TSON-RH/buy-service
   - https://github.com/TSON-RH/Service-StockPriceChart
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
