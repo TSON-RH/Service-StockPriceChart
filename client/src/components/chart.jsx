@@ -33,9 +33,10 @@ const Chart = (props) => {
     circleObj.price = ele.price;
     coordinates.push(circleObj);
     renderThis += `${xAxisStr},${yAxis.toString()} `;
-  })
+  });
 
   function handleMouseEnter(e) {
+    e.stopPropagation();
     const coorX = e.target.getAttribute('x');
     const circleElement = document.getElementById(coorX);
     props.handlePriceChange(circleElement.getAttribute('data-price'));
@@ -45,9 +46,9 @@ const Chart = (props) => {
     return (
       <g key={ele.cx}>
         <rect className={styles.rectangle} width={xInterval} height="100%" x={ele.cx} onMouseEnter={(e) => handleMouseEnter(e)} />
-        <circle id={ele.cx} stroke="#FFFFFF" strokeWidth="2" className={styles.circle} cx={ele.cx} cy={ele.cy} data-price={ele.price} r="4" />
+        <circle id={ele.cx} strokeWidth="2" className={styles.circle} cx={ele.cx} cy={ele.cy} data-price={ele.price} r="5" />
         <text className={styles.tooltip} x={ele.cx - 20} y="10">
-          {moment(ele.date).format('h:mm A')} ET
+          {moment(new Date(ele.date)).format('h:mm A')} ET
         </text>
         <line className={styles.timeLine} x1={ele.cx} y1="15" x2={ele.cx} y2={viewBoxHeight - 10} />
       </g>
@@ -57,7 +58,7 @@ const Chart = (props) => {
   return (
     <div>
       <svg viewBox={viewBox} className={styles.chart}>
-        <polyline fill="none" stroke="#cea774" strokeWidth="1" points={renderThis} />
+        <polyline fill="none" stroke="#21ce99" strokeWidth="2" points={renderThis} />
         {barEventListener}
       </svg>
     </div>

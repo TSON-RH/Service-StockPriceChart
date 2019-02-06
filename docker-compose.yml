@@ -1,0 +1,20 @@
+version: "3"
+services:
+    server:
+        image: webapp-server
+        container_name: webapp-server
+        build: .
+        ports:
+            - "3001:3001"
+        depends_on:
+            - mongo
+    mongo:
+        image: mongo
+        # restart: always
+        container_name: mongo
+        volumes:
+            - ./data:/data/db
+            # - ./data-node:/data/db
+        ports:
+            - 27017:27017
+        command: mongod

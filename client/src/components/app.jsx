@@ -1,5 +1,4 @@
 import React from 'react';
-import PriceChart from './pricechart.jsx';
 import Chart from './chart.jsx';
 import styles from './style.css';
 
@@ -50,14 +49,14 @@ class App extends React.Component {
         this.owner = priceData[id].owner;
         this.setState({ priceData, view });
       })
-      .catch(error => console.log(error));
+      .catch(error => {});
   }
 
   handleGetWeek(id, view) {
     fetch(`/api/symbol/${id}/week`)
       .then(response => response.json())
       .then(priceData => this.setState({ priceData, view }))
-      .catch(error => console.log(error));
+      .catch(error => {});
   }
 
   handlePriceChange(price) {
