@@ -1,30 +1,19 @@
-# Service - stockPriceChart
+# Stock Pricing Chart Component
 
 > Full-Stack project that displays stock trading information.
 
-## Related Projects
+![](https://s3.amazonaws.com/stockpricechart/screenshot+main.png)
 
-  - https://github.com/TSON-RH/Service-People-Also-Bought
-  - https://github.com/TSON-RH/price-volume-chart-service
-  - https://github.com/TSON-RH/buy-service
-  - https://github.com/TSON-RH/Service-StockPriceChart
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-### Installing Dependencies
-
+## Running in development
 From within the root directory:
+1. `npm install` to install dependencies
+1. `npm run react-dev` to create webpack bundle
+1. `npm start` to start the server on port 3001
 
-```sh
-npm install -g webpack
-npm install
-```
+## Other Components
+  - https://github.com/TSON-RH/price-volume-chart-service
+  - https://github.com/TSON-RH/Service-People-Also-Bought
+  - https://github.com/TSON-RH/buy-service
 
-- [ ] Run `npm install` inside the directory to install dependencies.
-- [ ] Ensure that the MongoDB process is running on your computer (`mongod`).
-- [ ] Create the database by running `npm run seed`
+## Sample Screenshot
+![](https://s3.amazonaws.com/stockpricechart/screenshot+motion.gif)
